@@ -17,7 +17,10 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'order_amount'=>rand(10000,1000000),
+            'company_id' => 1,
+            'customer_id' => rand(1,50),
+            'created_at'=>now(),
         ];
     }
 }

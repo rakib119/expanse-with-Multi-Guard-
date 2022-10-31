@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('expanses', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('cat_id');
-            $table->string('remarks');
+            $table->bigInteger('cat_id')->unsigned();
+            $table->text('remarks');
             $table->float('amount');
-            $table->bigInteger('company_id');
+            $table->bigInteger('company_id')->unsigned();
             $table->timestamps();
             $table->foreign('cat_id')->references('id')->on('expanse_categories')->onDelete('cascade');
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');

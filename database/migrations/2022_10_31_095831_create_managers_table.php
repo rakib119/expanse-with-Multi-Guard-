@@ -21,10 +21,10 @@ return new class extends Migration
             $table->integer('role_id');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->bigInteger('company_id');
+            $table->bigInteger('company_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();
-            
+
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });
     }

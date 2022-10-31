@@ -15,6 +15,6 @@ class ExpanseSeeder extends Seeder
      */
     public function run()
     {
-        Expanse::factory(50)->create();
+        Expanse::factory(20)->create();
     }
 }

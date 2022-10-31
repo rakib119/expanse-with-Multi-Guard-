@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->float('order_amount');
-            $table->bigInteger('company_id');
-            $table->bigInteger('customer_id');
+            $table->bigInteger('company_id')->unsigned();
+            $table->bigInteger('customer_id')->unsigned();
             $table->timestamps();
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
     }
 

@@ -18,7 +18,7 @@ class ExpanseCategoryFactory extends Factory
     {
         return [
             'e_cat_name' => fake()->name(),
-            'company_id' =>rand(1,10),
+            'company_id' =>1,
             'created_at'=>now(),
         ];
     }

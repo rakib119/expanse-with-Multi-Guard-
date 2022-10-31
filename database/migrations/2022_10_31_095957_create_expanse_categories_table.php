@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('expanse_categories', function (Blueprint $table) {
             $table->id();
             $table->string('e_cat_name');
-            $table->bigInteger('company_id');
+            $table->bigInteger('company_id')->unsigned();
             $table->timestamps();
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });

@@ -15,6 +15,6 @@ class ExpanseCategorySeeder extends Seeder
      */
     public function run()
     {
-        ExpanseCategory::factory(50)->create();
+        ExpanseCategory::factory(10)->create();
     }
 }

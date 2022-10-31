@@ -21,6 +21,10 @@ class CustomerFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'phone_number' => fake()->unique()->phoneNumber(),
+            'company_id' => 1,
+            'manager_id' => null,
+            'user_id' => rand(1,50),
+            'created_at' => now(),
         ];
     }
 }

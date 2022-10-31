@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('cat_id');
+            $table->bigInteger('cat_id')->unsigned();
             $table->string('name');
             $table->float('price');
-            $table->bigInteger('company_id');
+            $table->bigInteger('company_id')->unsigned();
             $table->timestamps();
             $table->foreign('cat_id')->references('id')->on('product_categories')->onDelete('cascade');
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
