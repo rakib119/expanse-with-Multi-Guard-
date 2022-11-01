@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Models\OrderDetail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
     Route::get('/', function () {
-        return view('welcome');
+        // return OrderDetail:: where('product_id',1)->count();
+     $orders = OrderDetail:: join('products','products.id','order_details.product_id')
+                ->select('products.name',DB::raw('count(order_details.product_id) as total'))->groupBy('products.name');
+              $product_name =  $orders->pluck('products.name')->toArray();
+                // implode(' ', $product_name);
+              $total_sell =  $orders->pluck('total')->toArray();
+        return view('welcome',compact('product_name','total_sell'));
     });
 });
 

@@ -52,15 +52,15 @@
     <!-- Libs JS -->
     <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/chartist/dist/chartist.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/chartist-plugin-threshold/dist/chartist-plugin-threshold.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/libs/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/libs/chartist/dist/chartist.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/libs/chartist-plugin-threshold/dist/chartist-plugin-threshold.min.js') }}"></script>
     <script src="{{ asset('assets/libs/raphael/raphael.min.js') }}"></script>
     <script src="{{ asset('assets/libs/morris.js/morris.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/gaugeJS/dist/gauge.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/chart.js/dist/Chart.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/c3/c3.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/gaugeJS/dist/gauge.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/libs/chart.js/dist/Chart.bundle.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/libs/c3/c3.min.js') }}"></script>
     <script src="{{ asset('assets/libs/d3/dist/d3.min.js') }}"></script>
     <script src="{{ asset('assets/libs/inputmask/dist/jquery.inputmask.min.js') }}"></script>
     <script src="{{ asset('assets/libs/parsleyjs/dist/parsley.min.js') }}"></script>
@@ -95,11 +95,13 @@
     <script src="{{ asset('assets/libs/ika.jvectormap/jquery-jvectormap-us-aea-en.js') }}"></script>
     <script src="{{ asset('assets/libs/cd-jvectormap/world-mill.js') }}"></script>
     <script src="{{ asset('assets/libs/gmaps/gmaps.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/quill/dist/quill.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/quill/dist/quill.min.js') }}"></script> --}}
+
+
 
     <!-- Theme JS -->
-    <script src="{{ asset('assets/js/theme.min.js') }}"></script>
-
+    {{-- <script src="{{ asset('assets/js/theme.min.js') }}"></script> --}}
+    @yield('javascript')
 </body>
 
 </html>
